@@ -1,3 +1,4 @@
+import java.util.*;
 public class ArmstrongNumber {
     public static String display(int n){
         int temp = n;
@@ -9,14 +10,17 @@ public class ArmstrongNumber {
             n/=10;
         }
         if(temp == sum){
-            return "yes it is Armstrong number : " + temp ;
+            return "yes it's Armstrong number : " + temp ;
         } else{
-            return "no it is not  Armstrong number : " + temp ; 
+            return "it's not  Armstrong number : " + temp ; 
         }
 
     }
     public static void main(String[] args){
-        int n = 154;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number : ");
+        int n = sc.nextInt();
         System.out.println(display(n));
+        sc.close();
     }
 }
