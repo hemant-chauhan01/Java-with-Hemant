@@ -18,12 +18,12 @@ public class Amount{
 
     int count1 = amount / 1;
     
-    System.out.println("Number of 100 rupees are : " + count100);
-    System.out.println("Number of 50 rupees are : " + count50);
-    System.out.println("Number of 20 rupees are : " + count20);
-    System.out.println("Number of 10 rupees are : " + count10);
-    System.out.println("Number of 5 rupees are : " + count5);
-    System.out.println("Number of 1 rupees are : " + count1);
+    System.out.println("$100 bills:  " + count100);
+    System.out.println("$50 bills: " + count50);
+    System.out.println("$20 bills:  " + count20);
+    System.out.println("$10 bills:  " + count10);
+    System.out.println("$5 bills: " + count5);
+    System.out.println("$1 bills: " + count1);
   }
   public static void main(String[] main){
     Scanner sc = new Scanner(System.in);
