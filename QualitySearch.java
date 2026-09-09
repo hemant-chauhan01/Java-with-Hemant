@@ -22,7 +22,7 @@ public class QualitySearch {
         }
 
         if (!found) {
-            System.out.println("Target not found");
+            System.out.println("Target not found ");
         }
     }
 
