@@ -1,26 +1,37 @@
 import java.util.*;
 public class ArmstrongNumber {
-    public static String display(int n){
-        int temp = n;
-        int digit;
-        int sum = 0;
-        while(n > 0){
-            digit = n%10;
-            sum += (int)Math.pow(digit,3);
-            n/=10;
+     public static boolean isArmstrong(int number){
+        int d = 0;
+        int t = number;
+        int t1 = number;
+        while(number>0){
+            number/=10;
+            d++;
         }
-        if(temp == sum){
-            return "yes it's Armstrong number : " + temp ;
-        } else{
-            return "it's not  Armstrong number : " + temp ; 
+        System.out.println("Digits: "+d);
+        int s = 0;
+        while(t>0){
+            s += Math.pow(t%10,d);
+            t/=10;
         }
-
+        if(s==t1){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("enter the number : ");
-        int n = sc.nextInt();
-        System.out.println(display(n));
+
+        System.out.print("Enter Integer: ");
+        int num = sc.nextInt();
+
+        if(isArmstrong(num)){
+            System.out.printf("Result: %d is an Armstrong Number.",num);
+        }else{
+            System.out.printf("Result: %d is not an Armstrong Number",num);
+        }
         sc.close();
     }
 }
